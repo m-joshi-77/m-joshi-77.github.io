@@ -1,17 +1,17 @@
 # title: "Tech Tonic"
 title: "Test"
-author: "Test"
-# description: "Hey I'm Manthan. Here I write about my take on AI know-how." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+author: "Manthan Joshi"
+# description: "Hey I'm Manthan. Here I introduce you to my take on AI concepts." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 description: "Test" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
-# email: "example@mail.com"
+# email: "manthanjsh@gmail.com"
 # twitter_username: "twitteruser"
-github_username: "test"
-# github_username: "m-joshi-77"
-linkedin_username: "test"
-# linkedin_username: "-manthan-joshi"
+# github_username: "test"
+github_username: "m-joshi-77"
+# linkedin_username: "test"
+linkedin_username: "-manthan-joshi"
 #facebook_username: username
 #flickr_username: username
 #instagram_username: username
