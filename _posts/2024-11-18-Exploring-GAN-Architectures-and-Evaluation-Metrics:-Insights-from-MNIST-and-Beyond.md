@@ -44,6 +44,8 @@ One of the most challenging aspects of GANs is maintaining training stability. T
 - **Mode Collapse**: The generator learns to produce a limited variety of outputs, ignoring the diversity in the dataset.  
 - **Discriminator Overfitting**: When the discriminator becomes too strong, it can outpace the generator, preventing meaningful gradient updates.
 
+<img src="/assets/images/gan_training_process.svg" alt="GAN Training Process Block Diagram" style="width:100%; max-width:600px;" />
+
 **Wasserstein GANs (WGANs)** offer a robust solution to these issues by introducing a new loss function based on Earth Mover's Distance. This metric measures the "distance" between real and generated data distributions in a way that avoids the pitfalls of traditional GAN loss functions. WGANs are less sensitive to architectural balance, reducing mode collapse and ensuring the generator produces more diverse outputs.
 
 ### Wasserstein Loss for WGAN
