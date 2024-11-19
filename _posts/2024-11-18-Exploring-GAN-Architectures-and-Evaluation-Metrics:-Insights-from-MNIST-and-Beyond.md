@@ -1,5 +1,6 @@
 ## Exploring GAN Architectures and Evaluation Metrics: Insights from MNIST and Beyond
 
+## Exploring GAN Architectures and Evaluation Metrics: Insights from MNIST and Beyond
 ## Introduction
 Generative Adversarial Networks (GANs) have revolutionized machine learning, unlocking the ability to generate realistic and diverse synthetic data. From art to deepfake videos, GANs have left a profound impact on numerous fields. However, their training isn't without challenges, such as instability, mode collapse, and the delicate balancing act between generator and discriminator networks.  
 
