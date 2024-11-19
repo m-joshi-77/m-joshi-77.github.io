@@ -1,4 +1,6 @@
-## Introduction  
+## Exploring GAN Architectures and Evaluation Metrics: Insights from MNIST and Beyond
+
+## Introduction
 Generative Adversarial Networks (GANs) have revolutionized machine learning, unlocking the ability to generate realistic and diverse synthetic data. From art to deepfake videos, GANs have left a profound impact on numerous fields. However, their training isn't without challenges, such as instability, mode collapse, and the delicate balancing act between generator and discriminator networks.  
 
 In this post, I explore how different loss functions influence GAN performance, the architectural considerations for complex datasets, and the metrics used to evaluate their outputs. Along the way, I’ll discuss the common pitfalls of GAN training and how advanced approaches like Wasserstein GANs (WGANs) address them.
