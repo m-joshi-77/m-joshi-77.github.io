@@ -79,6 +79,56 @@ Steps to incorporate a diffusion process:
 
 This integration allows the diffusion process to work in the compact, low-dimensional latent space created by the VAE.
 
+## Replacing the Decoder with a Diffusion Model in Code
+
+```python
+import torch
+import torch.nn as nn
+
+# Define Diffusion Model
+class DiffusionModel(nn.Module):
+    def __init__(self, latent_dim):
+        super(DiffusionModel, self).__init__()
+        self.model = nn.Sequential(
+            nn.Linear(latent_dim, 512),
+            nn.ReLU(),
+            nn.Linear(512, latent_dim)
+        )
+
+    def forward(self, x, t):
+        return self.model(x)
+
+# Define VAE with Diffusion Integration
+class VAEWithDiffusion(nn.Module):
+    def __init__(self, latent_dim):
+        super(VAEWithDiffusion, self).__init__()
+        self.encoder = nn.Sequential(
+            nn.Linear(784, 512),
+            nn.ReLU(),
+            nn.Linear(512, latent_dim * 2)  # Latent mean and variance
+        )
+        # Replace decoder with a diffusion model
+        self.diffusion_model = DiffusionModel(latent_dim)
+
+    def reparameterize(self, mu, logvar):
+        std = torch.exp(0.5 * logvar)
+        eps = torch.randn_like(std)
+        return mu + eps * std
+
+    def forward(self, x, t):
+        # Encode input into latent space
+        x = x.view(-1, 784)
+        stats = self.encoder(x)
+        mu, logvar = stats[:, :latent_dim], stats[:, latent_dim:]
+        z = self.reparameterize(mu, logvar)
+
+        # Apply diffusion process to z
+        noisy_z = z + torch.randn_like(z)  # Add Gaussian noise
+        denoised_z = self.diffusion_model(noisy_z, t)  # Denoise latent space
+
+        return denoised_z, mu, logvar
+```
+
 ## Why Stable Diffusion is Better than GANs  
 
 | **Feature**       | **Stable Diffusion**                  | **GANs**                           |
