@@ -146,5 +146,5 @@ class VAEWithDiffusion(nn.Module):
 
 ## Conclusion  
 
-Stable Diffusion is a significant leap in generative modeling, addressing the shortcomings of GANs while unlocking new applications in high-quality image synthesis, text-to-image generation, and more. By integrating concepts like VAEs and diffusion processes, it ensures robust, stable, and diverse outputs, making it a game-changer in the field of AI.
+Stable Diffusion is a significant leap in generative modeling, addressing the shortcomings of GANs while unlocking new applications in high-quality image synthesis, text-to-image generation. By integrating concepts like VAEs and diffusion processes, it ensures robust, stable, and diverse outputs.
 
