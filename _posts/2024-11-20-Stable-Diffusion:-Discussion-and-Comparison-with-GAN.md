@@ -1,27 +1,27 @@
 ## Stable Diffusion: Discussion and Comparison with GAN 
 
-### Introduction  
+## Introduction  
 While GANs have been the backbone of generative AI, they come with challenges like training instability, mode collapse, and balancing generator-discriminator dynamics. Enter **Stable Diffusion**—a diffusion-based generative model that overcomes many GAN limitations by employing probabilistic modeling and latent variable frameworks.  
 
 In this post, I’ll discuss Stable Diffusion, explore its VAE-based architecture, and a code example while comparing it with GANs to highlight its advantages.
 
 
 
-### What is Stable Diffusion?  
+## What is Stable Diffusion?  
 
 Stable Diffusion leverages **diffusion probabilistic models** to iteratively transform noise into data. Instead of directly generating data as GANs do, Stable Diffusion learns a **denoising process**, making it more stable and capable of producing high-quality results with better diversity. 
 
 
-### Core Component of Stable Diffusion  
+## Core Component of Stable Diffusion  
 
-#### Variational Autoencoders (VAE)  
+### Variational Autoencoders (VAE)  
 VAEs compress high-dimensional data (like images) into a latent space and reconstruct it. Stable Diffusion operates in this latent space, making training more efficient.
 
-#### VAE Architecture  
+### VAE Architecture  
 - **Encoder**: Compresses data into latent space.  
 - **Decoder**: Reconstructs data from latent representations.
 
-#### Core Code Example: VAE  
+### Core Code Example: VAE  
 ```python
 import torch
 import torch.nn as nn
@@ -83,7 +83,7 @@ This integration allows the diffusion process to work in the compact, low-dimens
 <img src="/assets/images/vaediffusion.png" alt="VAE with Diffusion Model Decoder" style="display:block; margin-left:auto; margin-right:auto; width:50%; max-width:600px;" />
 
 
-#### Replacing the Decoder with a Diffusion Model in Core Code Example
+### Replacing the Decoder with a Diffusion Model in Core Code Example
 
 ```python
 import torch
@@ -151,4 +151,3 @@ class VAEWithDiffusion(nn.Module):
 ## Conclusion  
 
 Stable Diffusion is a significant leap in generative modeling, addressing the shortcomings of GANs while unlocking new applications in high-quality image synthesis, text-to-image generation. By integrating concepts like VAEs and diffusion processes, it ensures robust, stable, and diverse outputs.
-
