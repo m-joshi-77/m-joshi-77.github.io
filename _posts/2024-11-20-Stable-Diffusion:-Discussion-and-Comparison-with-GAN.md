@@ -79,7 +79,7 @@ Steps to incorporate a diffusion process:
 
 This integration allows the diffusion process to work in the compact, low-dimensional latent space created by the VAE.
 
-## Replacing the Decoder with a Diffusion Model in Code
+#### Replacing the Decoder with a Diffusion Model in Core Code Example
 
 ```python
 import torch
@@ -136,7 +136,7 @@ class VAEWithDiffusion(nn.Module):
 | **Stability**      | Robust training with fewer failures  | Prone to instability                |
 | **Mode Collapse**  | Avoided due to iterative denoising   | Common problem                      |
 | **Output Diversity** | Generates diverse samples effectively | Limited by discriminator learning   |
-| **Efficiency**     | Operates in compressed latent space  | Directly works in high dimensions   |
+| **Efficiency**     | Operates in compressed latent space  | Directly works in high dimensions- costly   |
 
 ## Applications of Stable Diffusion  
 
