@@ -79,7 +79,7 @@ Steps to incorporate a diffusion process:
 
 This integration allows the diffusion process to work in the compact, low-dimensional latent space created by the VAE.
 
-<img src="/assets/images/vaediffusion.png" alt="VAE with Diffusion Model Decoder" style="width:100%; max-width:600px;" />
+<img src="/assets/images/vaediffusion.png" alt="VAE with Diffusion Model Decoder" style="width:50%; max-width:300px;" />
 
 #### Replacing the Decoder with a Diffusion Model in Core Code Example
 
