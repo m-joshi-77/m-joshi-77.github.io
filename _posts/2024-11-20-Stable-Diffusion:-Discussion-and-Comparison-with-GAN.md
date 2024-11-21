@@ -140,9 +140,9 @@ class VAEWithDiffusion(nn.Module):
 
 ## Applications of Stable Diffusion  
 
-- **Image Generation**: High-resolution and diverse image generation, for instance - DALL·E 2.  
-- **Inpainting**: Filling missing parts of images.  
-- **Super-Resolution**: Enhancing the quality of low-resolution images.  
+- **High Resolution and Diverse Image Generation**: Example - DALL·E 2.  
+- **Inpainting**: Means filling in missing parts of an image.  
+- **Enhancing the Quality of Low Resolution Images**.  
 
 ## Conclusion  
 
