@@ -1,4 +1,4 @@
-## Stable Diffusion: A New Frontier in Generative AI  
+## Stable Diffusion: Discussion and Comparison with GAN 
 
 ### Introduction  
 While GANs have been the backbone of generative AI, they come with challenges like training instability, mode collapse, and balancing generator-discriminator dynamics. Enter **Stable Diffusion**—a diffusion-based generative model that overcomes many GAN limitations by employing probabilistic modeling and latent variable frameworks.  
@@ -25,14 +25,14 @@ VAEs compress high-dimensional data (like images) into a latent space and recons
 - **Encoder**: Compresses data into latent space.  
 - **Decoder**: Reconstructs data from latent representations.
 
-#### Mathematical Formulation  
+[#### Mathematical Formulation  
 \[
 \mathcal{L}_{\text{VAE}} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - D_{\text{KL}}(q(z|x) || p(z))
 \]  
 Where:  
 - \( q(z|x) \): Posterior distribution.  
 - \( p(z) \): Prior distribution, typically Gaussian.  
-- \( D_{\text{KL}} \): KL divergence.  
+- \( D_{\text{KL}} \): KL divergence.  ]: #
 
 #### Core Code Example: VAE  
 ```python
